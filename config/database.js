@@ -60,10 +60,10 @@ module.exports = ({ env }) => {
           "DATABASE_HOST",
           "ep-wild-river-a1th1w53.ap-southeast-1.aws.neon.tech"
         ), // Neon PostgreSQL host
-        port: env.int("DATABASE_PORT", 5432),
-        database: env("DATABASE_NAME", "neon-db"), // Your PostgreSQL database
-        user: env("DATABASE_USERNAME", "neon-db_owner"), // Your PostgreSQL username
-        password: env("DATABASE_PASSWORD", "hoQpMGW3XA5a"), // Your PostgreSQL password
+        port: env.int("DATABASE_PORT"),
+        database: env("DATABASE_NAME"), // Your PostgreSQL database
+        user: env("DATABASE_USERNAME"), // Your PostgreSQL username
+        password: env("DATABASE_PASSWORD"), // Your PostgreSQL password
         ssl: env.bool("DATABASE_SSL", true) && {
           rejectUnauthorized: false, // Required for Neon PostgreSQL with SSL
         },
